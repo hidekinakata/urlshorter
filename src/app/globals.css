@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --text: #050505;
+        --background: #fafafa;
+        --primary: #a627ff;
+        --secondary: #fbd0f7;
+        --accent: #e817d3;
+    }
 
-* {
-    @apply font-azeretMono text-neutral-300
+    .dark {
+        --text: #fafafa;
+        --background: #050505;
+        --primary: #7e32b6;
+        --secondary: #3f1a3b;
+        --accent: #e817d3;
+    }
 }
 
 body {
-    @apply bg-indigo-950
+    @apply transition-all bg-background text-text px-24 antialiased font-sans
 }

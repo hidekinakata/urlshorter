@@ -1,14 +1,16 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Azeret_Mono, Inter } from "next/font/google";
+import { Azeret_Mono, Inter, Wix_Madefor_Text } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import React from "react";
 
-const azeretMono = Azeret_Mono({
+const sansfont = Wix_Madefor_Text({
   subsets: ["latin"],
-  variable: "--font-azeretMono",
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Url Shortener",
+  title: "LinKut - Url Shortener and QR code app",
   description: "Url Shortener app",
 };
 
@@ -19,7 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={azeretMono.variable}>{children}</body>
+      <body className={sansfont.variable}>
+        <Navbar />
+        <main className="flex min-h-screen flex-col items-center justify-center py-24">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
