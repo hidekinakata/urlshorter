@@ -10,7 +10,7 @@ const sansfont = Wix_Madefor_Text({
 });
 
 export const metadata: Metadata = {
-  title: "LinKut - Url Shortener and QR code app",
+  title: "LinKut - Url Shortener app",
   description: "Url Shortener app",
 };
 
