@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarType> = (props) => {
       }
     >
       <Link href={"/#"}>
-        <div className={"relative flex items-center "}>
+        <div className={"relative flex items-center mr-3"}>
           <span className={"relative h-14 block aspect-square text-4xl"}>
             <HiOutlineLink
               className={
